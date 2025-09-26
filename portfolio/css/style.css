@@ -72,12 +72,18 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   overflow-x: hidden;
+  line-height: 1;
 }
 h1 {
   font-weight: 300;
   font-size: 116px;
   line-height: 132px;
   text-transform: uppercase;
+}
+h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 40px;
 }
 h3 {
   font-size: 20px;
@@ -93,6 +99,14 @@ h3 {
   writing-mode: vertical-lr;
   transform: scale(-1);
 }
+.grid {
+  display: grid;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
 /* Header styles start */
 .header {
   background-color: #222;
@@ -105,6 +119,13 @@ h3 {
   flex-wrap: wrap;
   height: 60px;
 }
+.header__img-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header__list {
   list-style: none;
   display: flex;
@@ -112,6 +133,7 @@ h3 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
+  margin-right: 20px;
 }
 
 .header__link:link,
@@ -127,7 +149,7 @@ h3 {
 }
 /* Header styles end */
 
-/* Hero styles start */
+/* Hero section styles start */
 .hero {
   background-color: #222;
   color: #fff;
@@ -204,7 +226,6 @@ h3 {
 .hero__plus-icon {
   font-size: 48px;
   font-weight: 300;
-  grid-row: span 2;
   height: auto;
   width: 19px;
   height: 54px;
@@ -217,6 +238,7 @@ h3 {
   font-family: 'Mulish', sans-serif;
   background: url(../img/svg/arrow-down.svg) no-repeat right center;
   width: 119px;
+  height: 24px;
 }
 .hero__side {
   padding-top: 60px;
@@ -238,5 +260,28 @@ h3 {
   font-family: 'Mulish', sans-serif;
   font-weight: 500;
   font-size: 12px;
+  display: inline-block;
 }
-/* Hero styles end */
+/* Hero section styles end */
+
+/* About section styles start  */
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about__pic {
+  margin-bottom: 40px;
+}
+.about__title {
+  margin-bottom: 12px;
+}
+
+.about p {
+  font-family: 'Mulish', sans-serif;
+  line-height: 24px;
+}
+.about__card-2 {
+  margin-bottom: 40px;
+}
+/* About section styles end */
