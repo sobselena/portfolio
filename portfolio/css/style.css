@@ -38,6 +38,22 @@
   font-weight: 400;
   src: url('../fonts/mulish-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* mulish-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/mulish-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* mulish-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/mulish-v18-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 html {
   font-size: 10px;
@@ -133,6 +149,7 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  width: 60px;
 }
 .hero__addition-line {
   width: 1px;
@@ -153,16 +170,23 @@ h3 {
 }
 .hero__stats-container {
   display: flex;
-  align-items: flex-start;
   gap: 8px;
 }
 .hero__stats-num {
   font-weight: 300;
   font-size: 48px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   margin-bottom: 8px;
 }
 .hero__stats-text {
-  font-weight: 400;
+  font-family: 'Mulish', sans-serif;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero__title {
   margin-bottom: 40px;
@@ -173,11 +197,20 @@ h3 {
 
 .hero__middle-pic {
   align-self: center;
+  height: 220px;
+  width: 220px;
 }
 
 .hero__plus-icon {
   font-size: 48px;
   font-weight: 300;
+  grid-row: span 2;
+  height: auto;
+  width: 19px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__scroll-down {
@@ -187,15 +220,23 @@ h3 {
 }
 .hero__side {
   padding-top: 60px;
-}
-.hero__side-pic {
-  margin-bottom: 296px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__side-quote {
   font-family: 'Mulish', sans-serif;
   width: 220px;
   line-height: 24px;
+  margin-top: auto;
+  margin-left: auto;
   text-align: end;
+}
+.hero__addition-year,
+.hero__addition-award {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
 }
 /* Hero styles end */
