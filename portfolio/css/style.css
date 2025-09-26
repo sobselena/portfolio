@@ -57,20 +57,38 @@ body {
   font-size: 1.6rem;
   overflow-x: hidden;
 }
-.header {
-  background-color: #222;
+h1 {
+  font-weight: 300;
+  font-size: 116px;
+  line-height: 132px;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
+.rotation {
+  writing-mode: vertical-lr;
+  transform: scale(-1);
+}
+/* Header styles start */
+.header {
+  background-color: #222;
+}
+
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 60px;
 }
-
 .header__list {
   list-style: none;
   display: flex;
@@ -87,9 +105,97 @@ body {
   text-transform: uppercase;
 }
 .header__logo-link {
-  height: 60px;
-  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* Header styles end */
+
+/* Hero styles start */
+.hero {
+  background-color: #222;
+  color: #fff;
+}
+
+.hero__container {
+  display: flex;
+  gap: 20px;
+}
+.hero__main {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.hero__addition {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 }
+.hero__addition-line {
+  width: 1px;
+  height: 536px;
+  background-color: #fff;
+}
+.hero__info {
+  flex: 1;
+  padding-top: 160px;
+  padding-bottom: 60px;
+}
+.hero__stats {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.hero__stats-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.hero__stats-num {
+  font-weight: 300;
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+.hero__stats-text {
+  font-weight: 400;
+}
+.hero__title {
+  margin-bottom: 40px;
+}
+.hero__subtitle {
+  margin-bottom: 160px;
+}
+
+.hero__middle-pic {
+  align-self: center;
+}
+
+.hero__plus-icon {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.hero__scroll-down {
+  font-family: 'Mulish', sans-serif;
+  background: url(../img/svg/arrow-down.svg) no-repeat right center;
+  width: 119px;
+}
+.hero__side {
+  padding-top: 60px;
+}
+.hero__side-pic {
+  margin-bottom: 296px;
+}
+
+.hero__side-quote {
+  font-family: 'Mulish', sans-serif;
+  width: 220px;
+  line-height: 24px;
+  text-align: end;
+}
+/* Hero styles end */
