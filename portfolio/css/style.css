@@ -125,18 +125,6 @@ li {
   gap: 40px;
 }
 
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .wrapper_header {
   max-width: 1440px;
   overflow-x: hidden;
@@ -340,7 +328,9 @@ li {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.about__grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 .about__card p {
   line-height: 24px;
 }
@@ -357,6 +347,9 @@ li {
   height: 440px;
 }
 
+.about__pic_2 {
+  margin-bottom: 0;
+}
 .about__card {
   display: flex;
   flex-direction: column;
@@ -405,17 +398,17 @@ li {
 .slider-area_left {
   left: 0;
   width: 30%;
-  background-color: rgba(255, 60, 60, 0.1);
+  /* background-color: rgba(255, 60, 60, 0.1); */
 }
 .slider-area_mid {
   left: 30%;
   width: 40%;
-  background-color: rgba(60, 60, 255, 0.1);
+  /* background-color: rgba(60, 60, 255, 0.1); */
 }
 .slider-area_right {
   right: 0;
   width: 30%;
-  background-color: rgba(255, 60, 60, 0.1);
+  /* background-color: rgba(255, 60, 60, 0.1); */
 }
 
 .portfolio__container {
@@ -424,15 +417,15 @@ li {
   flex-shrink: 0;
 }
 
-.img_400-534 {
+.img_large {
   width: 400px;
   height: 534px;
 }
-.img_220-220 {
+.img_small {
   width: 220px;
   height: 220px;
 }
-.img_280-374 {
+.img_medium {
   width: 280px;
   height: 374px;
 }
@@ -459,7 +452,9 @@ li {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.price__cards {
+  grid-template-columns: repeat(4, 1fr);
+}
 .price__title {
   margin-bottom: 12px;
 }
@@ -535,7 +530,9 @@ li {
   color: #fff;
   margin-bottom: 40px;
 }
-
+.faq__grid {
+  grid-template-columns: repeat(2, 1fr);
+}
 .faq__answer {
   font-family: 'Mulish', sans-serif;
   font-size: 16px;
