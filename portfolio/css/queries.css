@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .header__burger {
+    display: block;
+  }
+  .header__list {
+    display: none;
+  }
+  h1 {
+    font-size: 68px;
+    line-height: 80px;
+  }
+  .hero__middle-pic {
+    display: none;
+  }
+  .hero__main {
+    gap: 20px;
+  }
+  .hero__side-pic {
+    width: 220px;
+    height: 294px;
+  }
+  .hero__addition-line {
+    height: 432px;
+  }
+}
