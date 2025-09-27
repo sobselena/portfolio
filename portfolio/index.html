@@ -251,7 +251,7 @@
               <p class="card__button-desc">
                 For short sessions and quick results
               </p>
-              <button class="btn btn_book">Book now</button>
+              <button class="btn">Book now</button>
             </div>
             <div class="card">
               <h3 class="card__title">Classic</h3>
@@ -268,7 +268,7 @@
               <p class="card__button-desc">
                 Perfect for couples, portraits, or lifestyle
               </p>
-              <button class="btn btn_book">Book now</button>
+              <button class="btn">Book now</button>
             </div>
             <div class="card">
               <h3 class="card__title">Story</h3>
@@ -287,7 +287,7 @@
               <p class="card__button-desc">
                 For when you want to capture everything
               </p>
-              <button class="btn btn_book">Book now</button>
+              <button class="btn">Book now</button>
             </div>
             <div class="card">
               <h3 class="card__title">Wedding</h3>
@@ -305,7 +305,7 @@
               <p class="card__button-desc">
                 Full-day or partial wedding coverage
               </p>
-              <button class="btn btn_book">Book now</button>
+              <button class="btn">Book now</button>
             </div>
           </div>
         </div>
@@ -470,20 +470,23 @@
     </main>
 
     <footer class="footer">
-      <div class="wrapper">
-        <h2>Like my portfolio? Sign up for a shoot!</h2>
-        <form action="#" method="post">
-          <input type="text" required placeholder="Your name" />
-          <input type="tel" required placeholder="+1" />
-          <button class="btn btn_book">Book now</button>
-        </form>
-        <div class="footer__contacts">
-          <a href="#!">Instagram</a>
-          <a href="#!">Telegram</a>
-          <a href="#!">Whatsapp</a>
-          <a href="#!">Europe</a>
-          <a href="#!">+1 234 9843572</a>
-        </div>
+      <h3 class="footer__title">Like my portfolio? Sign up for a shoot!</h3>
+      <form action="#" method="post" class="centre footer__form">
+        <input
+          type="text"
+          required
+          placeholder="Your name"
+          class="footer__input"
+        />
+        <input type="tel" required placeholder="+1" class="footer__input" />
+        <button type="submit" class="btn footer__btn">Book now</button>
+      </form>
+      <div class="centre footer__contacts">
+        <a href="#!" class="footer__link">Instagram</a>
+        <a href="#!" class="footer__link">Telegram</a>
+        <a href="#!" class="footer__link">Whatsapp</a>
+        <a href="#!" class="footer__link">Europe</a>
+        <a href="#!" class="footer__link">+1 234 9843572</a>
       </div>
     </footer>
   </body>

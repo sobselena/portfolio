@@ -144,6 +144,7 @@ li {
   display: none;
 }
 .btn {
+  border: none;
   height: 60px;
   display: flex;
   align-items: center;
@@ -473,6 +474,7 @@ li {
   padding-top: 60px;
   padding-bottom: 60px;
   color: #fff;
+  margin-bottom: 40px;
 }
 
 .faq__answer {
@@ -486,12 +488,17 @@ li {
   margin-bottom: 12px;
 }
 
+.faq__subtitle {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
 .faq__list {
   list-style: none;
 }
 .faq__question {
   display: flex;
-  padding-top: 18px;
+  padding-top: 17px;
   padding-bottom: 18px;
   align-items: center;
 }
@@ -514,3 +521,43 @@ li {
 }
 
 /* FAQ section styles end */
+
+/* Footer styles start */
+.footer__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer__form {
+  gap: 8px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.footer__contacts {
+  gap: 40px;
+  height: 100px;
+  background-color: #222;
+}
+.footer__input {
+  height: 100%;
+  width: 380px;
+  border: 1px solid #222;
+  padding: 12px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.footer__btn {
+  width: 200px;
+}
+.footer__link:link,
+.footer__link:visited {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* Footer styles end */
