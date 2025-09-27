@@ -140,7 +140,9 @@ li {
 .wrapper_header {
   max-width: 1440px;
 }
-
+.hidden {
+  display: none;
+}
 .btn {
   height: 60px;
   display: flex;
@@ -464,3 +466,51 @@ li {
   line-height: 20px;
 }
 /* Price section styles end */
+
+/* FAQ section styles start */
+.faq {
+  background-color: #222;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: #fff;
+}
+
+.faq__answer {
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.faq__title {
+  margin-bottom: 12px;
+}
+
+.faq__list {
+  list-style: none;
+}
+.faq__question {
+  display: flex;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  align-items: center;
+}
+
+.faq__question img {
+  margin-left: auto;
+}
+.faq__icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.faq__item:not(:first-child) {
+  border-top: 1px solid #fff;
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+/* FAQ section styles end */
