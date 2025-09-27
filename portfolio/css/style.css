@@ -65,6 +65,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  line-height: 1;
 }
 body {
   font-family: 'Oswald', 'Mulish', sans-serif;
@@ -100,7 +101,9 @@ h3 {
   font-weight: 400;
 }
 p,
-div {
+div,
+span,
+li {
   font-family: 'Mulish', sans-serif;
 }
 .wrapper {
@@ -153,12 +156,13 @@ div {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 40.5px;
   margin-right: 20px;
 }
 
 .header__link:link,
 .header__link:visited {
+  font-family: 'Oswald', sans-serif;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
@@ -213,6 +217,7 @@ div {
   gap: 8px;
 }
 .hero__stats-num {
+  font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 48px;
   height: 54px;
@@ -238,6 +243,7 @@ div {
 }
 
 .hero__plus-icon {
+  font-family: 'Oswald';
   font-size: 48px;
   font-weight: 300;
   height: auto;
@@ -246,9 +252,11 @@ div {
 }
 
 .hero__scroll-down {
-  background: url(../img/svg/arrow-down.svg) no-repeat right center;
+  background: url(../img/svg/arrow-down.svg) no-repeat right top;
   width: 119px;
   height: 24px;
+  display: flex;
+  align-items: center;
 }
 .hero__side {
   padding-top: 60px;
@@ -258,6 +266,7 @@ div {
 }
 
 .hero__side-quote {
+  line-height: 24px;
   width: 220px;
   margin-top: auto;
   margin-left: auto;
@@ -321,6 +330,7 @@ div {
   display: inline-block;
   width: 360px;
   margin-bottom: 40px;
+  line-height: 24px;
 }
 .portfolio__list {
   display: flex;
