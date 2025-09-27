@@ -382,17 +382,19 @@ li {
 }
 .portfolio__list {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
   gap: 20px;
   margin-left: 20px;
   margin-right: 20px;
   height: 654px;
-  transform: translateX(-1260px);
+  /* transform: translateX(-1260px); */
 }
 
 .portfolio__container {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .img_400-534 {
