@@ -78,6 +78,8 @@ h1,
 h2,
 h3 {
   font-family: 'Oswald', sans-serif;
+  line-height: 1;
+  margin-top: 0;
 }
 h1 {
   font-weight: 300;
@@ -279,11 +281,24 @@ div {
   padding-bottom: 60px;
 }
 
+.about__card p {
+  line-height: 24px;
+}
+
+.about__title {
+  line-height: 40px;
+  margin-bottom: 12px;
+}
+
 .about__pic {
   margin-bottom: 40px;
+  display: block;
 }
-.about__title {
-  margin-bottom: 12px;
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 .about__card-2 {
@@ -314,12 +329,14 @@ div {
   margin-left: 20px;
   margin-right: 20px;
   height: 654px;
+  transform: translateX(-1260px);
 }
 
 .portfolio__container {
   display: flex;
   flex-direction: column;
 }
+
 .img_400-534 {
   width: 400px;
   height: 534px;
@@ -334,13 +351,17 @@ div {
 }
 
 .img_bottom {
-  justify-self: flex-end;
+  margin-top: auto;
 }
 
 .img_centre {
   margin: auto 0;
 }
 .img_top {
-  justify-self: flex-start;
+  justify-self: 0;
+}
+
+.img_mid {
+  margin-top: 120px;
 }
 /* Portfolio section styles end */
