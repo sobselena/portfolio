@@ -114,22 +114,45 @@ li {
   writing-mode: vertical-lr;
   transform: scale(-1);
 }
-.grid {
-  display: grid;
-}
 
 .centre {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .wrapper_header {
   max-width: 1440px;
+}
+
+.btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #222;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 /* Header styles start */
 .header {
@@ -302,6 +325,8 @@ li {
 .about__pic {
   margin-bottom: 40px;
   display: block;
+  width: 440px;
+  height: 440px;
 }
 
 .about__card {
@@ -375,3 +400,67 @@ li {
   margin-top: 120px;
 }
 /* Portfolio section styles end */
+
+/* Price section styles start */
+
+.price {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.price__title {
+  margin-bottom: 12px;
+}
+
+.price__subtitle {
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+.price__subtitle {
+  margin-bottom: 40px;
+}
+.card {
+  border: 1px solid #222;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.card__title {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+.card__value,
+.card__list li {
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+.card__value {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.card__list li {
+  background: url(../img/svg/item.svg) no-repeat left center;
+  padding-left: 12px;
+}
+.card__button-desc {
+  margin-top: auto;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  line-height: 20px;
+}
+/* Price section styles end */
