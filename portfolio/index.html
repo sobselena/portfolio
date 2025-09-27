@@ -9,7 +9,7 @@
   <body>
     <!-- <header> starts -->
     <header class="header">
-      <div class="header__wrapper">
+      <div class="wrapper wrapper_header header__wrapper">
         <div class="header__img-container">
           <a href="/" class="logo header__logo-link"
             ><img src="img/svg/icon.svg" alt="logo img" class="icon icon_logo"
@@ -40,8 +40,8 @@
     <main class="main">
       <!-- hero section starts -->
       <section class="hero">
-        <div class="hero__container">
-          <div class="rotation hero__addition">
+        <div class="wrapper wrapper_header hero__container">
+          <div class="rotation centre hero__addition">
             <div class="hero__addition-year">2025</div>
             <span class="hero__addition-line"></span>
             <div class="hero__addition-award">Best Photographer by MAX</div>
@@ -50,18 +50,18 @@
             <div class="hero__info">
               <div class="hero__stats">
                 <div class="hero__stats-container">
-                  <span class="hero__plus-icon">+</span>
+                  <span class="centre hero__plus-icon">+</span>
                   <div>
                     <div class="hero__stats-num">487</div>
-                    <div class="hero__stats-text">Photo sessions</div>
+                    <div class="centre hero__stats-text">Photo sessions</div>
                   </div>
                 </div>
 
                 <div class="hero__stats-container">
-                  <span class="hero__plus-icon">+</span>
+                  <span class="centre hero__plus-icon">+</span>
                   <div>
                     <div class="hero__stats-num">356</div>
-                    <div class="hero__stats-text">Satisfied clients</div>
+                    <div class="centre hero__stats-text">Satisfied clients</div>
                   </div>
                 </div>
               </div>
@@ -140,93 +140,93 @@
       <section class="portfolio">
         <div class="wrapper">
           <h2 class="portfolio__title">my portfolio</h2>
-          <p>
+          <p class="portfolio__subtitle">
             Every shoot is a story. Here you’ll find portraits, love stories,
             family sessions, and more.
           </p>
-          <div class="gallery__list">
-            <div class="gallery__container">
+          <div class="portfolio__list">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-1.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_400-534 img_bottom"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-2.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_220-220 img_centre"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-3.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_280-374 img_centre"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-4.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_400-534 img_top"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-5.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_280-374 img_centre"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-6.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_220-220 img_centre"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-7.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_280-374 img_top"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-8.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_400-534 img_bottom"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-9.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_220-220 img_centre"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-10.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_280-374 img_top"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-11.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_280-374 img_centre"
               />
             </div>
-            <div class="gallery__container">
+            <div class="portfolio__container">
               <img
                 src="img/slider/sidebar-12.jpg"
                 alt="sidebar img"
-                class="gallery__img"
+                class="img img_400-534 img_top"
               />
             </div>
           </div>
@@ -417,18 +417,20 @@
     </main>
 
     <footer class="footer">
-      <h2>Like my portfolio? Sign up for a shoot!</h2>
-      <form action="#" method="post">
-        <input type="text" required placeholder="Your name" />
-        <input type="tel" required placeholder="+1" />
-        <button class="btn btn_book">Book now</button>
-      </form>
-      <div class="footer__contacts">
-        <a href="#!">Instagram</a>
-        <a href="#!">Telegram</a>
-        <a href="#!">Whatsapp</a>
-        <a href="#!">Europe</a>
-        <a href="#!">+1 234 9843572</a>
+      <div class="wrapper">
+        <h2>Like my portfolio? Sign up for a shoot!</h2>
+        <form action="#" method="post">
+          <input type="text" required placeholder="Your name" />
+          <input type="tel" required placeholder="+1" />
+          <button class="btn btn_book">Book now</button>
+        </form>
+        <div class="footer__contacts">
+          <a href="#!">Instagram</a>
+          <a href="#!">Telegram</a>
+          <a href="#!">Whatsapp</a>
+          <a href="#!">Europe</a>
+          <a href="#!">+1 234 9843572</a>
+        </div>
       </div>
     </footer>
   </body>
