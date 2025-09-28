@@ -129,9 +129,11 @@ li {
 
 .wrapper_header {
   max-width: 1440px;
-  overflow: hidden;
 }
 
+.wrapper_sidebar {
+  width: 100dvw;
+}
 .btn {
   border: none;
   height: 60px;
@@ -221,6 +223,7 @@ li {
   display: flex;
   gap: 40px;
   padding: 0 20px;
+  justify-content: space-between;
 }
 
 .hero__addition {
@@ -268,10 +271,14 @@ li {
   margin-bottom: 160px;
 }
 
-.hero__middle-pic {
+.hero__middle {
   align-self: center;
-  height: 220px;
-  width: 220px;
+  max-width: 220px;
+}
+
+.hero__middle-pic {
+  height: auto;
+  width: 100%;
 }
 
 .hero__plus-icon {
@@ -304,6 +311,7 @@ li {
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
+  max-width: 280px;
 }
 
 .hero__side-quote {
@@ -314,8 +322,8 @@ li {
   text-align: end;
 }
 .hero__side-pic {
-  height: 374px;
-  width: 280px;
+  height: auto;
+  width: 100%;
 }
 .hero__addition-year,
 .hero__addition-award {
@@ -345,8 +353,8 @@ li {
 .about__pic {
   margin-bottom: 40px;
   display: block;
-  width: 440px;
-  height: 440px;
+  width: 100%;
+  height: auto;
 }
 
 .about__pic_2 {
