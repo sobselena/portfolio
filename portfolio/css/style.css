@@ -54,19 +54,20 @@
   font-weight: 500;
   src: url('../fonts/mulish-v18-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 html {
   font-size: 10px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
   line-height: 1;
 }
 body {
@@ -85,8 +86,8 @@ h3 {
 }
 h1 {
   font-weight: 300;
-  font-size: 116px;
-  line-height: 132px;
+  font-size: clamp(68px, calc((100vw - 768px) / 14 + 68px), 116px);
+  line-height: clamp(80px, calc(13 * (100vw - 768px) / 168 + 80px), 132px);
   text-transform: uppercase;
 }
 h2 {
@@ -106,11 +107,18 @@ div,
 span,
 li {
   font-family: 'Mulish', sans-serif;
+  line-height: 24px;
 }
 
 .wrapper {
-  max-width: 1400px;
+  box-sizing: content-box;
   margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+.wrapper_header {
+  max-width: 1440px;
+  padding: 0;
 }
 .rotation {
   writing-mode: vertical-lr;
@@ -127,12 +135,8 @@ li {
   gap: 40px;
 }
 
-.wrapper_header {
-  max-width: 1440px;
-}
-
 .wrapper_sidebar {
-  width: 100dvw;
+  width: 100%;
 }
 .btn {
   border: none;
@@ -217,6 +221,8 @@ li {
 .hero__container {
   display: flex;
   gap: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .hero__main {
   flex: 1;
@@ -232,13 +238,13 @@ li {
 }
 .hero__addition-line {
   width: 1px;
-  height: 536px;
+  flex: 1;
+  max-height: 536px;
   background-color: #fff;
 }
 .hero__info {
   flex: 1;
-  padding-top: 160px;
-  padding-bottom: 60px;
+  padding-top: 100px;
 }
 .hero__stats {
   display: flex;
@@ -307,8 +313,6 @@ li {
   background: url(../img/svg/hovered-arrow-down.svg) no-repeat right top;
 }
 .hero__side {
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   max-width: 280px;
@@ -394,7 +398,6 @@ li {
   justify-content: center;
   margin: 0 auto;
   gap: 20px;
-  padding: 0 20px;
   height: 654px;
 
   /* transform: translateX(-1260px); */
@@ -613,9 +616,12 @@ li {
 }
 
 .footer__form {
+  max-width: 976px;
   gap: 8px;
   height: 60px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer__contacts {
   gap: 40px;
@@ -623,8 +629,8 @@ li {
   background-color: #222;
 }
 .footer__input {
-  height: 100%;
-  width: 380px;
+  width: 100%;
+  height: 60px;
   border: 1px solid #222;
   padding: 12px;
   font-family: 'Oswald', sans-serif;
@@ -639,6 +645,8 @@ li {
 }
 .footer__btn {
   width: 200px;
+  flex-shrink: 0;
+  height: 60px;
 }
 .footer__link:link,
 .footer__link:visited {
