@@ -57,7 +57,7 @@
     height: 432px;
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .hero__addition {
     display: none;
   }
@@ -95,8 +95,10 @@
   .hero__subtitle {
     margin-bottom: 0;
   }
+
   .hero__info {
-    padding-top: 60px;
+    padding-top: 0;
+
     padding-bottom: 0px;
   }
   .hero__side {
@@ -115,7 +117,7 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
-    max-width: 100%; /* было 340px */
+    max-width: 100%;
     width: 100%;
   }
   .input-wrapper {
@@ -128,25 +130,18 @@
   .footer__input {
     width: 100%;
   }
-}
-@media (max-width: 525px) {
-  /* .footer__contacts {
+  .footer__contacts {
     flex-direction: column;
     gap: 36px;
     height: 100%;
     padding: 38px;
-  } */
-  .footer__contacts {
-    gap: 0;
-    justify-content: space-around;
   }
 }
+
 @media (max-width: 390px) {
   .faq__subtitle {
     height: 48px;
   }
-}
-@media (max-width: 382px) {
   .hero__stats {
     gap: 0;
     justify-content: space-between;

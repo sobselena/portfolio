@@ -118,7 +118,6 @@ li {
 }
 .wrapper_header {
   max-width: 1440px;
-  padding: 0;
 }
 .rotation {
   writing-mode: vertical-lr;
@@ -137,6 +136,7 @@ li {
 
 .wrapper_sidebar {
   width: 100%;
+  padding: 0;
 }
 .btn {
   border: none;
@@ -390,13 +390,12 @@ li {
   display: inline-block;
   margin-bottom: 40px;
   line-height: 24px;
-  width: 360px;
+  max-width: 360px;
 }
 .portfolio__list {
   position: relative;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
   gap: 20px;
   height: 654px;
 
