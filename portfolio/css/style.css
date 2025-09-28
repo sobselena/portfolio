@@ -58,6 +58,8 @@
 html {
   font-size: 10px;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 *,
 *::before,
@@ -127,7 +129,7 @@ li {
 
 .wrapper_header {
   max-width: 1440px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .btn {
@@ -374,9 +376,9 @@ li {
 }
 .portfolio__subtitle {
   display: inline-block;
-  width: 360px;
   margin-bottom: 40px;
   line-height: 24px;
+  width: 360px;
 }
 .portfolio__list {
   position: relative;
@@ -460,6 +462,7 @@ li {
 }
 
 .price__subtitle {
+  line-height: 24px;
   height: 24px;
   display: flex;
   align-items: center;
@@ -548,6 +551,7 @@ li {
   display: flex;
   align-items: center;
   height: 24px;
+  line-height: 24px;
 }
 .faq__list {
   list-style: none;
@@ -634,5 +638,6 @@ li {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  height: 24px;
 }
 /* Footer styles end */
