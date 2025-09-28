@@ -616,9 +616,7 @@ li {
 }
 
 .footer__form {
-  max-width: 976px;
   gap: 8px;
-  height: 60px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -628,17 +626,43 @@ li {
   height: 100px;
   background-color: #222;
 }
+.input-wrapper {
+  max-width: 380px;
+  height: 60px;
+  flex: 1;
+}
 .footer__input {
   width: 100%;
-  height: 60px;
-  border: 1px solid #222;
-  padding: 12px;
+  height: 100%;
+  padding: 18px 12px;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #222;
   text-transform: uppercase;
+  border: 1px solid #222;
   transition: all 0.3s;
+}
+.footer__input_phone {
+  padding: 18px 12px 18px 34px;
+}
+.input-wrapper_phone {
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.input-wrapper_phone::before {
+  content: '+1';
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #222;
+  pointer-events: none;
 }
 .footer__input:hover {
   border: 1px solid #ff3c3c;
