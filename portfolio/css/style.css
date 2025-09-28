@@ -60,6 +60,7 @@ body {
 }
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -118,6 +119,7 @@ li {
 }
 .wrapper_header {
   max-width: 1440px;
+  padding: 0;
 }
 .rotation {
   writing-mode: vertical-lr;
