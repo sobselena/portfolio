@@ -1,8 +1,38 @@
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .hero__info {
+    flex: 0;
+  }
+}
+@media (max-width: 1328px) {
+  .hero__middle {
+    display: none;
+  }
+}
+@media (max-width: 1260px) {
+  /* price section styles start */
+  .price__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 34px;
+  }
+  /* price section styles end */
+}
+@media (max-width: 1130px) {
   h1 {
     font-size: 68px;
     line-height: 80px;
   }
+}
+@media (max-width: 1028px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .about__pic_3 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   .wrapper {
     max-width: 728px;
   }
@@ -19,9 +49,7 @@
   /* header styles end */
 
   /* hero section styles start */
-  .hero__middle-pic {
-    display: none;
-  }
+
   .hero__main {
     gap: 20px;
   }
@@ -32,25 +60,8 @@
   .hero__addition-line {
     height: 432px;
   }
-  /* hero section styles start */
-  .about__grid {
-    grid-template-columns: 1fr;
-  }
-  .about__pic {
-    height: 728px;
-    width: 728px;
-  }
-  .about__pic_3 {
-    display: none;
-  }
+
   /* hero section styles end */
-  /* price section styles start */
-  .price__cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0 34px;
-  }
-  /* price section styles end */
 
   /* faq section styles start*/
   .faq__grid {
