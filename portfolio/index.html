@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional photographer's website" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/svg/icon.svg" />
     <link rel="stylesheet" href="css/queries.css" />
-    <title>Portfolio</title>
+    <title>Portfolio &mdash; Professional photographer</title>
   </head>
   <body>
     <!-- <header> starts -->
-    <header class="header">
+    <header class="header nav-open">
       <div class="wrapper wrapper_header header__wrapper">
         <div class="header__img-container center">
           <a href="/" class="logo header__logo-link"
@@ -35,14 +36,19 @@
               <a href="#contacts" class="header__link">Contacts</a>
             </li>
           </ul>
-          <div class="header__img-container center header__burger">
-            <img
-              src="img/svg/burger.svg"
-              alt="burger"
-              class="header__burger-img"
-            />
-          </div>
         </nav>
+        <button class="header__img-container center header__burger">
+          <img
+            src="img/svg/burger.svg"
+            alt="burger"
+            class="header__burger-img header__burger-img_open"
+          />
+          <img
+            src="img/svg/close-burger.svg"
+            alt="close burger img"
+            class="header__burger-img header__burger-img_close"
+          />
+        </button>
       </div>
     </header>
     <!-- <header> ends -->

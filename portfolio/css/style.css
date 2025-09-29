@@ -180,7 +180,11 @@ li {
 }
 .header__burger {
   display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
+
 .header__list {
   list-style: none;
   display: flex;
@@ -212,6 +216,50 @@ li {
   align-items: center;
   justify-content: flex-start;
 }
+
+/* =====Menu styles start ===== */
+/* .header {
+  position: relative;
+}
+.header__navigation {
+  display: block;
+  position: absolute;
+  background-color: #222;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.header__list {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin: 0;
+}
+.header__burger-img_close {
+  display: none;
+}
+.nav-open .header__burger-img_open {
+  display: none;
+}
+.nav-open .header__burger-img_close {
+  display: block;
+}
+.nav-open .header__navigation {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+} */
+/* =====Menu styles end ===== */
 /* Header styles end */
 
 /* Hero section styles start */
