@@ -162,6 +162,7 @@ li {
 /* Header styles start */
 .header {
   background-color: #222;
+  position: relative;
 }
 
 .header__wrapper {
@@ -183,9 +184,18 @@ li {
 .header__icon {
   display: none;
 }
-
-.icons-container_burger {
-  display: none;
+.icons-container {
+  position: relative;
+}
+.icon {
+  transition: all 0.5s;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(50%, -50%) scale(1);
+  position: absolute;
+  top: 50%;
+  right: 50%;
 }
 
 .header__list {

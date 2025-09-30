@@ -21,10 +21,7 @@
   .faq__question:hover {
     color: #ff3c3c;
   }
-  .faq__item.active .faq__question:hover {
-    background: url(../img/svg/hovered-minus.svg) no-repeat right center;
-  }
-  .faq__item.hidden .faq__question:hover {
+  .faq__question:hover {
     background: url(../img/svg/hovered-plus.svg) no-repeat right center;
   }
   .footer__input:hover {
@@ -117,40 +114,24 @@
     visibility: visible;
     pointer-events: auto;
   }
-  .icons-container {
-    position: relative;
-  }
-  .header {
-    position: relative;
-  }
+
   .header__icon {
     display: block;
   }
-  .icon {
-    transition: all 0.5s;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translate(50%, -50%) scale(1);
-    position: absolute;
-    top: 50%;
-    right: 50%;
-  }
-  .icon_close {
+  .header__close-icon {
     opacity: 0;
     transform: translate(50%, -50%) scale(0.8);
     pointer-events: none;
     visibility: hidden;
   }
-
-  .nav-open .icon_close {
+  .nav-open .header__close-icon {
     opacity: 1;
     transform: translate(50%, -50%) scale(1);
     pointer-events: auto;
     visibility: visible;
   }
 
-  .nav-open .icon_burger {
+  .nav-open .header__burger-icon {
     opacity: 0;
     transform: translate(50%, -50%) scale(0.8);
     pointer-events: none;
