@@ -1,3 +1,37 @@
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    color: #222;
+    background-color: #ff3c3c;
+  }
+  .header__link:hover,
+  .header__link:active {
+    color: #ff3c3c;
+  }
+  .hero__scroll-down:hover {
+    color: #ff3c3c;
+    background: url(../img/svg/hovered-arrow-down.svg) no-repeat right top;
+  }
+  .card:hover {
+    border: 1px solid #ff3c3c;
+  }
+  .card:hover .btn {
+    background-color: #ff3c3c;
+    color: #222;
+  }
+  .faq__question:hover {
+    color: #ff3c3c;
+  }
+  .faq__item.active .faq__question:hover {
+    background: url(../img/svg/hovered-minus.svg) no-repeat right center;
+  }
+  .faq__item.hidden .faq__question:hover {
+    background: url(../img/svg/hovered-plus.svg) no-repeat right center;
+  }
+  .footer__input:hover {
+    border: 1px solid #ff3c3c;
+  }
+}
+
 @media (max-width: 1354px) {
   .hero__main {
     gap: 20px;
