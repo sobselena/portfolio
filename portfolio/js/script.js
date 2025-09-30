@@ -1,12 +1,11 @@
 const header = document.querySelector('.header');
-const burger = document.querySelector('.header__burger');
+const headerIcon = document.querySelector('.header__icon');
 const headerLinks = document.querySelectorAll('.header__link');
 const headerNavigation = document.querySelector('.header__navigation');
 const faqQuestions = document.querySelectorAll('.faq__question');
 const faqItems = document.querySelectorAll('.faq__item');
 /* ===== Header Navigation ===== */
-burger.addEventListener('click', () => {
-  console.log('Something supposed to happen');
+headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
   if (header.classList.contains('nav-open')) {
     document.documentElement.style.overflow = 'hidden';
@@ -45,3 +44,5 @@ faqQuestions.forEach((faqQuestion, activeIndex) => {
     localStorage.setItem('faqActiveIndex', JSON.stringify(faqActiveIndex));
   });
 });
+
+/* ===== Modals ===== */

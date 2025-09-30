@@ -172,16 +172,22 @@ li {
   height: 60px;
 }
 
-.header__img-container {
+.icons-container {
   width: 60px;
   height: 60px;
-}
-.header__burger {
-  display: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
+
+.header__icon {
+  display: none;
+}
+
+.icons-container_burger {
+  display: none;
+}
+
 .header__list {
   list-style: none;
   display: flex;
@@ -192,10 +198,6 @@ li {
   margin-right: 20px;
 }
 
-.header__burger {
-  width: 60px;
-  height: 60px;
-}
 .header__link:link,
 .header__link:visited {
   font-family: 'Oswald', sans-serif;
@@ -658,6 +660,12 @@ li {
 /* ===== Menu ===== start*/
 .overlay {
   display: none;
+}
+.footer__wrapper {
+  position: relative;
+}
+.modal-active .footer__icon {
+  display: block;
 }
 .modal-active.footer {
   position: fixed;

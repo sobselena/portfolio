@@ -14,7 +14,7 @@
     <!-- <header> start -->
     <header class="header">
       <div class="wrapper wrapper_header header__wrapper">
-        <div class="header__img-container center">
+        <div class="icons-container center">
           <a href="/" class="logo header__logo-link"
             ><img src="img/svg/icon.svg" alt="logo img" class="icon icon_logo"
           /></a>
@@ -38,16 +38,12 @@
             </li>
           </ul>
         </nav>
-        <button class="header__img-container center header__burger">
-          <img
-            src="img/svg/burger.svg"
-            alt="burger"
-            class="header__burger-img header__burger-img_open"
-          />
+        <button class="icons-container center header__icon">
+          <img src="img/svg/burger.svg" alt="burger" class="icon icon_burger" />
           <img
             src="img/svg/close-burger.svg"
             alt="close burger img"
-            class="header__burger-img header__burger-img_close"
+            class="icon icon_close"
           />
         </button>
       </div>
@@ -153,7 +149,7 @@
 
       <!-- portfolio section start-->
       <section class="portfolio" id="portfolio">
-        <div class="wrapper portfolio__wrapper">
+        <div class="wrapper">
           <h2 class="portfolio__title">my portfolio</h2>
           <p class="portfolio__subtitle">
             Every shoot is a story. Here you’ll find portraits, love stories,
@@ -446,7 +442,14 @@
     </main>
 
     <footer class="footer" id="contacts">
-      <div class="wrapper">
+      <div class="wrapper footer__wrapper">
+        <button class="icons-container center footer__icon">
+          <img
+            src="img/svg/close-burger.svg"
+            alt="close burger img"
+            class="icon close-icon"
+          />
+        </button>
         <h3 class="footer__title">Like my portfolio? Sign up for a shoot!</h3>
         <form action="#" method="post" class="center footer__form">
           <div class="input-wrapper">

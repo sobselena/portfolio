@@ -86,9 +86,6 @@
   .hero__addition-line {
     height: 432px;
   }
-  .header__burger {
-    display: block;
-  }
   .header__list {
     display: block;
     display: flex;
@@ -120,34 +117,44 @@
     visibility: visible;
     pointer-events: auto;
   }
+  .icons-container {
+    position: relative;
+  }
   .header {
     position: relative;
   }
-  .header__burger-img {
-    transition: opacity 0.5s;
-    opacity: 1;
-    transform: scale(1);
-    position: absolute;
-    top: 0;
-    right: 0;
+  .header__icon {
+    display: block;
   }
-
-  .header__burger-img_close {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
-  }
-
-  .nav-open .header__burger-img_close {
+  .icon {
+    transition: all 0.5s;
     opacity: 1;
-    transform: scale(1);
+    visibility: visible;
     pointer-events: auto;
+    transform: translate(50%, -50%) scale(1);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+  }
+  .icon_close {
+    opacity: 0;
+    transform: translate(50%, -50%) scale(0.8);
+    pointer-events: none;
+    visibility: hidden;
   }
 
-  .nav-open .header__burger-img_open {
+  .nav-open .icon_close {
+    opacity: 1;
+    transform: translate(50%, -50%) scale(1);
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-open .icon_burger {
     opacity: 0;
-    transform: scale(0.8);
+    transform: translate(50%, -50%) scale(0.8);
     pointer-events: none;
+    visibility: hidden;
   }
 }
 @media (max-width: 767px) {
