@@ -13,12 +13,12 @@ const footerForm = document.querySelector('.footer__form');
 const scrollDownBtn = document.querySelector('.hero__scroll-down');
 const aboutSection = document.getElementById('about-me');
 const footerInputs = document.querySelectorAll('.footer__input');
-const sliderAreaLeft = document.querySelector('.slider-area_left');
-const sliderAreaRight = document.querySelector('.slider-area_right');
+const sliderAreas = document.querySelector('.slider-areas');
+const sliderAreaLeft = document.querySelector('.slider-areas__left');
+const sliderAreaRight = document.querySelector('.slider-areas__right');
 const portfolioList = document.querySelector('.portfolio__list');
 const portfolioImgs = portfolioList.querySelectorAll('.img');
 const portfolioWrapper = document.querySelector('.portfolio__wrapper');
-
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
@@ -38,6 +38,7 @@ headerLinks.forEach((headerLink) => {
   });
 });
 /* ===== Slider ===== */
+const mediaQuery = window.matchMedia('(hover:hover) and (pointer:fine)');
 
 function calculateWidth() {
   // Calculate overall slider width of imgs including gaps
@@ -60,10 +61,13 @@ let leftInterval;
 let rightInterval;
 let currentTranslateX = 0;
 let maxTranslate;
-const padding = 20;
 function calculateMaxTranslate() {
-  maxTranslate = Math.abs(
-    (portfolioWrapper.clientWidth - portfolioListWidth) / 2 - padding
+  maxTranslate = Math.max(
+    0,
+
+    (portfolioListWidth -
+      parseInt(window.getComputedStyle(portfolioWrapper).width)) /
+      2
   );
 }
 
@@ -98,6 +102,21 @@ sliderAreaRight.addEventListener('mouseenter', () => {
 sliderAreaRight.addEventListener('mouseleave', () => {
   sliderAreaRight.style.backgroundColor = '';
   clearInterval(rightInterval);
+});
+if (!mediaQuery.matches) {
+  sliderAreas.style.display = 'none';
+  portfolioWrapper.style.overflow = 'auto';
+}
+mediaQuery.addEventListener('change', (e) => {
+  if (e.matches) {
+    sliderAreas.style.display = 'grid';
+    console.log('You are on a desktop device now');
+  } else {
+    sliderAreas.style.display = 'none';
+
+    portfolioWrapper.style.overflow = 'auto';
+    console.log('You are on a mobile device now');
+  }
 });
 /* ===== Accordion ===== */
 function removeFaqItemActive() {
@@ -148,7 +167,7 @@ footerForm.addEventListener('submit', (e) => {
   closeForm();
 });
 
-overlay.addEventListener('click', (e) => {
+overlay.addEventListener('click', () => {
   closeForm();
 });
 /* ===== Scroll down button ===== */
