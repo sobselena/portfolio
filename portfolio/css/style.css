@@ -108,9 +108,12 @@ h3 {
 p,
 div,
 span,
-li {
+li,
+button {
   font-family: 'Mulish', sans-serif;
+  font-size: 16px;
   line-height: 24px;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -142,7 +145,7 @@ li {
   width: 100%;
   padding: 0;
 }
-.btn {
+.book-now-btn {
   border: none;
   height: 60px;
   display: flex;
@@ -310,6 +313,7 @@ li {
 }
 
 .hero__scroll-down {
+  background-color: transparent;
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -320,6 +324,7 @@ li {
   align-items: center;
   transition: all 0.3s;
   cursor: pointer;
+  border: none;
 }
 
 .hero__side {

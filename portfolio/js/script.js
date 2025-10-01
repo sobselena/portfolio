@@ -5,11 +5,14 @@ const headerNavigation = document.querySelector('.header__navigation');
 const faqQuestions = document.querySelectorAll('.faq__question');
 const faqItems = document.querySelectorAll('.faq__item');
 const priceSection = document.querySelector('.price');
-const bookNowBtns = priceSection.querySelectorAll('.btn');
+const bookNowBtns = priceSection.querySelectorAll('.book-now-btn');
 const overlay = document.querySelector('.overlay');
 const footer = document.querySelector('.footer');
 const footerCloseBtn = document.querySelector('.footer__icon');
 const footerForm = document.querySelector('.footer__form');
+const scrollDownBtn = document.querySelector('.hero__scroll-down');
+const aboutSection = document.getElementById('about-me');
+const footerInputs = document.querySelectorAll('.footer__input');
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
@@ -68,4 +71,20 @@ bookNowBtns.forEach((bookNowBtn) => {
 
 footerCloseBtn.addEventListener('click', closeForm);
 
-footerForm.addEventListener('submit', closeForm);
+footerForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  footerInputs.forEach((footerInput) => {
+    footerInput.value = '';
+  });
+  closeForm();
+});
+
+/* ===== Scroll down button ===== */
+scrollDownBtn.addEventListener('click', (e) => {
+  const aboutCoords = aboutSection.getBoundingClientRect();
+  window.scrollTo({
+    left: window.scrollX + aboutCoords.left,
+    top: window.scrollY + aboutCoords.top,
+    behavior: 'smooth',
+  });
+});

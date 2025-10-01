@@ -1,5 +1,5 @@
 @media (hover: hover) and (pointer: fine) {
-  .btn:hover {
+  .book-now-btn:hover {
     color: #222;
     background-color: #ff3c3c;
   }
@@ -14,7 +14,7 @@
   .card:hover {
     border: 1px solid #ff3c3c;
   }
-  .card:hover .btn {
+  .card:hover .book-now-btn {
     background-color: #ff3c3c;
     color: #222;
   }
