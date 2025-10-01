@@ -13,6 +13,11 @@ const footerForm = document.querySelector('.footer__form');
 const scrollDownBtn = document.querySelector('.hero__scroll-down');
 const aboutSection = document.getElementById('about-me');
 const footerInputs = document.querySelectorAll('.footer__input');
+const sliderAreaLeft = document.querySelector('.slider-area_left');
+const sliderAreaRight = document.querySelector('.slider-area_right');
+const portfolioList = document.querySelector('.portfolio__list');
+const portfolioImgs = portfolioList.querySelectorAll('.img');
+const portfolioWrapper = document.querySelector('.portfolio__slider-wrapper');
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
@@ -31,7 +36,60 @@ headerLinks.forEach((headerLink) => {
     }
   });
 });
+/* ===== Slider ===== */
 
+function calculateWidth() {
+  // Calculate overall slider width of imgs including gaps
+  const gapsWidth =
+    parseInt(window.getComputedStyle(portfolioList).gap) *
+    (portfolioImgs.length - 1);
+  const imgsWidth = Array.from(portfolioImgs).reduce(
+    (width, img) => width + img.offsetWidth,
+    0
+  );
+  return imgsWidth + gapsWidth;
+}
+
+const portfolioListWidth = calculateWidth();
+const maxTranslate = Math.abs(
+  (portfolioWrapper.clientWidth - portfolioListWidth) / 2
+);
+const SCROLL_TIME = 10 * 1000;
+const INTERVAL_TIME = 10;
+
+let leftInterval;
+let rightInterval;
+let currentTranslateX = 0;
+sliderAreaLeft.addEventListener('mouseenter', () => {
+  sliderAreaLeft.style.backgroundColor = 'rgba(255, 60, 60, 0.1)';
+
+  leftInterval = setInterval(() => {
+    currentTranslateX = Math.min(
+      currentTranslateX + (portfolioListWidth / SCROLL_TIME) * INTERVAL_TIME,
+      maxTranslate
+    );
+    portfolioList.style.transform = `translateX(${currentTranslateX}px)`;
+  }, INTERVAL_TIME);
+});
+sliderAreaLeft.addEventListener('mouseleave', () => {
+  sliderAreaLeft.style.backgroundColor = '';
+  clearInterval(leftInterval);
+});
+
+sliderAreaRight.addEventListener('mouseenter', () => {
+  sliderAreaRight.style.backgroundColor = 'rgba(255, 60, 60, 0.1)';
+  rightInterval = setInterval(() => {
+    currentTranslateX = Math.max(
+      currentTranslateX - (portfolioListWidth / SCROLL_TIME) * INTERVAL_TIME,
+      -maxTranslate
+    );
+    portfolioList.style.transform = `translateX(${currentTranslateX}px)`;
+  }, INTERVAL_TIME);
+});
+sliderAreaRight.addEventListener('mouseleave', () => {
+  sliderAreaRight.style.backgroundColor = '';
+  clearInterval(rightInterval);
+});
 /* ===== Accordion ===== */
 function removeFaqItemActive() {
   faqItems.forEach((faqItem) => faqItem.classList.remove('faq__item_active'));

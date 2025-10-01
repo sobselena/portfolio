@@ -141,8 +141,9 @@ button {
   gap: 40px;
 }
 
-.wrapper_sidebar {
+.wrapper_slider {
   width: 100%;
+  max-width: none;
   padding: 0;
   position: relative;
 }
