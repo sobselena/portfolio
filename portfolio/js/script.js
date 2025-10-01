@@ -17,7 +17,8 @@ const sliderAreaLeft = document.querySelector('.slider-area_left');
 const sliderAreaRight = document.querySelector('.slider-area_right');
 const portfolioList = document.querySelector('.portfolio__list');
 const portfolioImgs = portfolioList.querySelectorAll('.img');
-const portfolioWrapper = document.querySelector('.portfolio__slider-wrapper');
+const portfolioWrapper = document.querySelector('.portfolio__wrapper');
+
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
@@ -51,15 +52,23 @@ function calculateWidth() {
 }
 
 const portfolioListWidth = calculateWidth();
-const maxTranslate = Math.abs(
-  (portfolioWrapper.clientWidth - portfolioListWidth) / 2
-);
+
 const SCROLL_TIME = 10 * 1000;
 const INTERVAL_TIME = 10;
 
 let leftInterval;
 let rightInterval;
 let currentTranslateX = 0;
+let maxTranslate;
+const padding = 20;
+function calculateMaxTranslate() {
+  maxTranslate = Math.abs(
+    (portfolioWrapper.clientWidth - portfolioListWidth) / 2 - padding
+  );
+}
+
+calculateMaxTranslate();
+window.addEventListener('resize', calculateMaxTranslate);
 sliderAreaLeft.addEventListener('mouseenter', () => {
   sliderAreaLeft.style.backgroundColor = 'rgba(255, 60, 60, 0.1)';
 
