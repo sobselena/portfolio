@@ -118,20 +118,15 @@
   .header__icon {
     display: block;
   }
-  .header__close-icon {
-    opacity: 0;
-    transform: translate(50%, -50%) scale(0.8);
-    pointer-events: none;
-    visibility: hidden;
-  }
-  .nav-open .header__close-icon {
+
+  .nav-open .icon_close {
     opacity: 1;
     transform: translate(50%, -50%) scale(1);
     pointer-events: auto;
     visibility: visible;
   }
 
-  .nav-open .header__burger-icon {
+  .nav-open .icon_burger {
     opacity: 0;
     transform: translate(50%, -50%) scale(0.8);
     pointer-events: none;

@@ -4,6 +4,12 @@ const headerLinks = document.querySelectorAll('.header__link');
 const headerNavigation = document.querySelector('.header__navigation');
 const faqQuestions = document.querySelectorAll('.faq__question');
 const faqItems = document.querySelectorAll('.faq__item');
+const priceSection = document.querySelector('.price');
+const bookNowBtns = priceSection.querySelectorAll('.btn');
+const overlay = document.querySelector('.overlay');
+const footer = document.querySelector('.footer');
+const footerCloseBtn = document.querySelector('.footer__icon');
+const footerForm = document.querySelector('.footer__form');
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
@@ -46,3 +52,20 @@ faqQuestions.forEach((faqQuestion, activeIndex) => {
 });
 
 /* ===== Modals ===== */
+function closeForm() {
+  overlay.classList.remove('modal-active');
+  footer.classList.remove('modal-active');
+  document.documentElement.style.overflow = '';
+}
+function openForm() {
+  overlay.classList.add('modal-active');
+  footer.classList.add('modal-active');
+  document.documentElement.style.overflow = 'hidden';
+}
+bookNowBtns.forEach((bookNowBtn) => {
+  bookNowBtn.addEventListener('click', openForm);
+});
+
+footerCloseBtn.addEventListener('click', closeForm);
+
+footerForm.addEventListener('submit', closeForm);
