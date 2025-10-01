@@ -144,6 +144,7 @@ button {
 .wrapper_sidebar {
   width: 100%;
   padding: 0;
+  position: relative;
 }
 .book-now-btn {
   border: none;
@@ -408,7 +409,6 @@ button {
   max-width: 360px;
 }
 .portfolio__list {
-  position: relative;
   display: flex;
   justify-content: center;
   gap: 20px;

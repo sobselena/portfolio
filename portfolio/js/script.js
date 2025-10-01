@@ -33,19 +33,21 @@ headerLinks.forEach((headerLink) => {
 });
 
 /* ===== Accordion ===== */
-
-let faqActiveIndex = JSON.parse(localStorage.getItem('faqActiveIndex')) || 0;
-faqItems[faqActiveIndex].classList.add('faq__item_active');
+function removeFaqItemActive() {
+  faqItems.forEach((faqItem) => faqItem.classList.remove('faq__item_active'));
+}
+removeFaqItemActive();
+let faqActiveIndex = JSON.parse(localStorage.getItem('faqActiveIndex')) ?? 0;
+faqActiveIndex === 'none' ||
+  faqItems[faqActiveIndex].classList.add('faq__item_active');
 faqQuestions.forEach((faqQuestion, activeIndex) => {
   faqQuestion.addEventListener('click', () => {
     const faqClickedItem = faqQuestion.closest('.faq__item');
     if (faqClickedItem.classList.contains('faq__item_active')) {
-      faqActiveIndex = 0;
+      faqActiveIndex = 'none';
       faqClickedItem.classList.remove('faq__item_active');
     } else {
-      faqItems.forEach((faqItem) =>
-        faqItem.classList.remove('faq__item_active')
-      );
+      removeFaqItemActive();
       faqActiveIndex = activeIndex;
       faqClickedItem.classList.add('faq__item_active');
     }
@@ -79,6 +81,9 @@ footerForm.addEventListener('submit', (e) => {
   closeForm();
 });
 
+overlay.addEventListener('click', (e) => {
+  closeForm();
+});
 /* ===== Scroll down button ===== */
 scrollDownBtn.addEventListener('click', (e) => {
   const aboutCoords = aboutSection.getBoundingClientRect();
