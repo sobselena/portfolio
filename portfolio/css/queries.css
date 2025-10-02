@@ -96,7 +96,7 @@
     display: block;
     position: absolute;
     background-color: #222;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
     height: calc(100vh - 100%);
@@ -118,7 +118,6 @@
   .header__icon {
     display: block;
   }
-
   .nav-open .icon_close {
     opacity: 1;
     transform: translate(50%, -50%) scale(1);
@@ -131,6 +130,23 @@
     transform: translate(50%, -50%) scale(0.8);
     pointer-events: none;
     visibility: hidden;
+  }
+
+  .lines-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .lines-container span {
+    height: 2px;
+    background-color: #fff;
+  }
+  .lines-container span:nth-child(1) {
+    width: 12px;
+  }
+  .lines-container span:nth-child(2) {
+    width: 20px;
   }
 }
 @media (max-width: 767px) {

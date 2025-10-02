@@ -75,8 +75,6 @@ function calculateMaxTranslate() {
 calculateMaxTranslate();
 window.addEventListener('resize', calculateMaxTranslate);
 sliderAreaLeft.addEventListener('mouseenter', () => {
-  sliderAreaLeft.style.backgroundColor = 'rgba(255, 60, 60, 0.1)';
-
   leftInterval = setInterval(() => {
     currentTranslateX = Math.min(
       currentTranslateX + (portfolioListWidth / SCROLL_TIME) * INTERVAL_TIME,
@@ -86,12 +84,10 @@ sliderAreaLeft.addEventListener('mouseenter', () => {
   }, INTERVAL_TIME);
 });
 sliderAreaLeft.addEventListener('mouseleave', () => {
-  sliderAreaLeft.style.backgroundColor = '';
   clearInterval(leftInterval);
 });
 
 sliderAreaRight.addEventListener('mouseenter', () => {
-  sliderAreaRight.style.backgroundColor = 'rgba(255, 60, 60, 0.1)';
   rightInterval = setInterval(() => {
     currentTranslateX = Math.max(
       currentTranslateX - (portfolioListWidth / SCROLL_TIME) * INTERVAL_TIME,
@@ -101,7 +97,6 @@ sliderAreaRight.addEventListener('mouseenter', () => {
   }, INTERVAL_TIME);
 });
 sliderAreaRight.addEventListener('mouseleave', () => {
-  sliderAreaRight.style.backgroundColor = '';
   clearInterval(rightInterval);
 });
 if (!mediaQuery.matches) {
@@ -136,11 +131,9 @@ mediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     sliderAreas.style.display = 'grid';
     mobileSlider.style.display = 'none';
-    console.log('You are on a desktop device now');
   } else {
     sliderAreas.style.display = 'none';
     mobileSlider.style.display = 'block';
-    console.log('You are on a mobile device now');
   }
 });
 /* ===== Accordion ===== */
