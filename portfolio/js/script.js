@@ -19,6 +19,7 @@ const sliderAreaRight = document.querySelector('.slider-areas__right');
 const portfolioList = document.querySelector('.portfolio__list');
 const portfolioImgs = portfolioList.querySelectorAll('.img');
 const portfolioWrapper = document.querySelector('.portfolio__wrapper');
+const mobileSlider = document.querySelector('.mobile-slider');
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
@@ -39,7 +40,7 @@ headerLinks.forEach((headerLink) => {
 });
 /* ===== Slider ===== */
 const mediaQuery = window.matchMedia('(hover:hover) and (pointer:fine)');
-
+// Desktop logic
 function calculateWidth() {
   // Calculate overall slider width of imgs including gaps
   const gapsWidth =
@@ -105,16 +106,40 @@ sliderAreaRight.addEventListener('mouseleave', () => {
 });
 if (!mediaQuery.matches) {
   sliderAreas.style.display = 'none';
-  portfolioWrapper.style.overflow = 'auto';
+  mobileSlider.style.display = 'block';
 }
+
+// Mobile logic
+
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+mobileSlider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+mobileSlider.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+
+  currentX = e.touches[0].clientX;
+  currentTranslateX = Math.max(
+    Math.min(currentTranslateX + (currentX - startX) / 10, maxTranslate),
+    -maxTranslate
+  );
+  portfolioList.style.transform = `translateX(${currentTranslateX}px)`;
+});
+mobileSlider.addEventListener('touchend', () => {
+  isDragging = false;
+});
+
 mediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     sliderAreas.style.display = 'grid';
+    mobileSlider.style.display = 'none';
     console.log('You are on a desktop device now');
   } else {
     sliderAreas.style.display = 'none';
-
-    portfolioWrapper.style.overflow = 'auto';
+    mobileSlider.style.display = 'block';
     console.log('You are on a mobile device now');
   }
 });
