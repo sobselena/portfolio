@@ -684,9 +684,6 @@ button {
   display: flex;
   flex-direction: column;
 }
-.footer__container {
-  padding: 0 60px 60px 60px;
-}
 .footer__icon {
   align-self: flex-end;
 }
@@ -718,7 +715,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 500px;
-  width: 100%;
+  width: calc(100vw - 40px);
 
   z-index: 1000;
   background-color: #fff;
@@ -729,9 +726,17 @@ button {
 .modal-active .footer__form {
   flex-direction: column;
   max-width: 380px;
+  width: 100%;
+}
+.modal-active .input-wrapper {
+  max-width: 380px;
+  width: 100%;
 }
 .modal-active .footer__contacts {
   display: none;
+}
+.modal-active .footer__container {
+  padding: 0 20px 60px 20px;
 }
 .modal-active .footer__form {
   flex-direction: column;

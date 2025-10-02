@@ -118,7 +118,7 @@ mobileSlider.addEventListener('touchmove', (e) => {
 
   currentX = e.touches[0].clientX;
   currentTranslateX = Math.max(
-    Math.min(currentTranslateX + (currentX - startX) / 10, maxTranslate),
+    Math.min(currentTranslateX + (currentX - startX) / 8, maxTranslate),
     -maxTranslate
   );
   portfolioList.style.transform = `translateX(${currentTranslateX}px)`;
