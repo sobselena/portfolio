@@ -23,6 +23,7 @@ const mobileSlider = document.querySelector('.mobile-slider');
 /* ===== Header Navigation ===== */
 headerIcon.addEventListener('click', () => {
   header.classList.toggle('nav-open');
+  headerNavigation.style.transition = 'all 0.5s ease-in-out';
   if (header.classList.contains('nav-open')) {
     document.documentElement.style.overflow = 'hidden';
   } else {
@@ -71,9 +72,17 @@ function calculateMaxTranslate() {
       2
   );
 }
-
+function checkNavigationTransition() {
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    headerNavigation.style.transition = 'none';
+  }
+}
 calculateMaxTranslate();
-window.addEventListener('resize', calculateMaxTranslate);
+checkNavigationTransition();
+window.addEventListener('resize', () => {
+  checkNavigationTransition();
+  calculateMaxTranslate();
+});
 sliderAreaLeft.addEventListener('mouseenter', () => {
   leftInterval = setInterval(() => {
     currentTranslateX = Math.min(
