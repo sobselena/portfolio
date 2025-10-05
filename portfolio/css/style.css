@@ -168,7 +168,6 @@ button {
 /* Header styles start */
 .header {
   background-color: #222;
-  position: relative;
 }
 
 .header__wrapper {
@@ -185,13 +184,11 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .header__icon {
   display: none;
-}
-.icons-container {
-  position: relative;
 }
 .icon {
   transition: all 0.5s;

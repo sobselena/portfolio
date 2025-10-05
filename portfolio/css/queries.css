@@ -94,12 +94,12 @@
     transform: translate(100%);
     transition: all 0.5s ease-in-out;
     display: block;
-    position: absolute;
+    position: fixed;
     background-color: #222;
-    top: 100%;
+    top: 60px;
     left: 0;
-    width: 100%;
-    height: calc(100vh - 100%);
+    width: 100vw;
+    height: calc(100vh - 60px);
     display: flex;
     align-items: center;
     justify-content: center;

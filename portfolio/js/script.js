@@ -75,6 +75,8 @@ function calculateMaxTranslate() {
 function checkNavigationTransition() {
   if (window.matchMedia('(max-width: 768px)').matches) {
     headerNavigation.style.transition = 'none';
+  } else {
+    header.classList.remove('nav-open');
   }
 }
 calculateMaxTranslate();
