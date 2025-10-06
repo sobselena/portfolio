@@ -58,17 +58,21 @@ const portfolioListWidth = calculateWidth();
 
 const SCROLL_TIME = 10 * 1000;
 const INTERVAL_TIME = 10;
-
 let leftInterval;
 let rightInterval;
 let currentTranslateX = 0;
 let maxTranslate;
+
 function calculateMaxTranslate() {
   maxTranslate = Math.max(
     0,
 
     (portfolioListWidth -
-      parseInt(window.getComputedStyle(portfolioWrapper).width)) /
+      window.innerWidth +
+      parseInt(window.getComputedStyle(portfolioWrapper).paddingLeft) +
+      parseInt(
+        window.getComputedStyle(portfolioWrapper).paddingRight
+      )) /*parseInt(window.getComputedStyle(portfolioWrapper).width)*/ /
       2
   );
 }
