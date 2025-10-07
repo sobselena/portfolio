@@ -195,7 +195,7 @@ button {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translate(50%, -50%) scale(1);
+  transform: translate(50%, -50%);
   position: absolute;
   top: 50%;
   right: 50%;
@@ -684,20 +684,9 @@ button {
 .footer__icon {
   align-self: flex-end;
 }
-.icon_close {
-  opacity: 0;
-  transform: translate(50%, -50%) scale(0.8);
-  pointer-events: none;
-  visibility: hidden;
-}
+
 .modal-active .footer__form {
   margin-bottom: 0;
-}
-.modal-active .icon_close {
-  opacity: 1;
-  transform: translate(50%, -50%) scale(1);
-  pointer-events: auto;
-  visibility: visible;
 }
 
 .footer__icon {

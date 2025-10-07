@@ -118,19 +118,6 @@
   .header__icon {
     display: block;
   }
-  .nav-open .icon_close {
-    opacity: 1;
-    transform: translate(50%, -50%) scale(1);
-    pointer-events: auto;
-    visibility: visible;
-  }
-
-  .nav-open .icon_burger {
-    opacity: 0;
-    transform: translate(50%, -50%) scale(0.8);
-    pointer-events: none;
-    visibility: hidden;
-  }
 
   .lines-container {
     display: flex;
@@ -141,12 +128,27 @@
   .lines-container span {
     height: 2px;
     background-color: #fff;
+    transition: all 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
   .lines-container span:nth-child(1) {
     width: 12px;
+    transform: translate(calc(-50% + 4px), calc(-50% - 3px));
   }
   .lines-container span:nth-child(2) {
     width: 20px;
+    transform: translate(-50%, calc(-50% + 3px));
+  }
+
+  .nav-open .lines-container span:nth-child(1) {
+    width: 20px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .nav-open .lines-container span:nth-child(2) {
+    width: 20px;
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 @media (max-width: 767px) {
